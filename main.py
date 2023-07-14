@@ -2,7 +2,6 @@ from pytube import YouTube
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk
-from tqdm import tqdm
 from os import getcwd
 
 
