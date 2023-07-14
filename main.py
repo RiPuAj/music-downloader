@@ -16,7 +16,6 @@ def download(url, path):
 
         yt = YouTube(str(url))
 
-        #https://www.youtube.com/watch?v=ya1_Y_OLD0g&ab_channel=Tainy
         yt.streams.filter(only_audio=True, file_extension='mp4').first().download(str(path))
         messagebox.showinfo(message="Downloaded successfully", title="Download Completed")
     except Exception as e:
@@ -61,6 +60,5 @@ if __name__ == "__main__":
 
     downloadButton = tk.Button(root, text = "Download", width=20, command= lambda : download(urlEntrada.get(), pathEntrada.get()))
     downloadButton.place(x = 100, y = 110)
-    #downloadButton.pack(side = "bottom")
     
     root.mainloop()
